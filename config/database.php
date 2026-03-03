@@ -178,6 +178,18 @@ return [
             'backoff_cap' => env('REDIS_BACKOFF_CAP', 1000),
         ],
 
+        // ✅ Pub/Sub connection — no timeout for long-running subscribe
+        'pubsub' => [
+            'url'                => env('REDIS_URL'),
+            'host'               => env('REDIS_HOST', '127.0.0.1'),
+            'username'           => env('REDIS_USERNAME'),
+            'password'           => env('REDIS_PASSWORD') ?: null,
+            'port'               => env('REDIS_PORT', '6379'),
+            'database'           => env('REDIS_PUBSUB_DB', '0'),
+            'read_write_timeout' => -1,  // ✅ no timeout
+            'prefix'             => '',  // ✅ no prefix — exact channel name
+        ],
+
     ],
 
 ];
