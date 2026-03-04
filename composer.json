@@ -12,10 +12,12 @@
         "php": "^8.2",
         "aws/aws-sdk-php": "*",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "php-amqplib/php-amqplib": "^3.7"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
+        "kwn/php-rdkafka-stubs": "^3.0",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.24",
         "laravel/sail": "^1.41",
